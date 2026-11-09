@@ -1,0 +1,40 @@
+Node
+  Nothing
+  DOCUMENT
+  [ Node
+      Nothing
+      (LIST
+         ListAttributes
+           { listType = BULLET_LIST
+           , listTight = False
+           , listStart = 0
+           , listDelim = PERIOD_DELIM
+           })
+      [ Node
+          Nothing
+          ITEM
+          [ Node Nothing PARAGRAPH [ Node Nothing (TEXT "a") [] ] ]
+      , Node
+          Nothing
+          ITEM
+          [ Node Nothing PARAGRAPH [ Node Nothing (TEXT "b") [] ] ]
+      ]
+  , Node
+      Nothing
+      (LIST
+         ListAttributes
+           { listType = ORDERED_LIST
+           , listTight = False
+           , listStart = 1
+           , listDelim = PERIOD_DELIM
+           })
+      [ Node
+          Nothing
+          ITEM
+          [ Node Nothing PARAGRAPH [ Node Nothing (TEXT "c") [] ] ]
+      , Node
+          Nothing
+          ITEM
+          [ Node Nothing PARAGRAPH [ Node Nothing (TEXT "d") [] ] ]
+      ]
+  ]

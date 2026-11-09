@@ -1,0 +1,12 @@
+Node
+  Nothing
+  DOCUMENT
+  [ Node
+      Nothing
+      PARAGRAPH
+      [ Node Nothing EMPH [ Node Nothing (TEXT "a b c") [] ] ]
+  , Node
+      Nothing
+      PARAGRAPH
+      [ Node Nothing STRONG [ Node Nothing (TEXT "d e f") [] ] ]
+  ]

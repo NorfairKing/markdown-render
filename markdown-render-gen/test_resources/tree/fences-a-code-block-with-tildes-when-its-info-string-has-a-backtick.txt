@@ -1,0 +1,4 @@
+Node
+  Nothing
+  DOCUMENT
+  [ Node Nothing (CODE_BLOCK "a`b" "```\n~~~\n") [] ]

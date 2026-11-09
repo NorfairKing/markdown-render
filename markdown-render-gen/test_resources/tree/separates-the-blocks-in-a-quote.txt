@@ -1,0 +1,10 @@
+Node
+  Nothing
+  DOCUMENT
+  [ Node
+      Nothing
+      BLOCK_QUOTE
+      [ Node Nothing PARAGRAPH [ Node Nothing (TEXT "a") [] ]
+      , Node Nothing PARAGRAPH [ Node Nothing (TEXT "b") [] ]
+      ]
+  ]

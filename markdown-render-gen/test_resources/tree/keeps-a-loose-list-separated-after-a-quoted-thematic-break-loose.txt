@@ -1,0 +1,22 @@
+Node
+  Nothing
+  DOCUMENT
+  [ Node
+      Nothing
+      (LIST
+         ListAttributes
+           { listType = BULLET_LIST
+           , listTight = False
+           , listStart = 0
+           , listDelim = PERIOD_DELIM
+           })
+      [ Node
+          Nothing
+          ITEM
+          [ Node Nothing BLOCK_QUOTE [ Node Nothing THEMATIC_BREAK [] ] ]
+      , Node
+          Nothing
+          ITEM
+          [ Node Nothing PARAGRAPH [ Node Nothing (TEXT "a") [] ] ]
+      ]
+  ]

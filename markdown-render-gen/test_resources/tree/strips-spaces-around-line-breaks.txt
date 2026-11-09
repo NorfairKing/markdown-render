@@ -1,0 +1,13 @@
+Node
+  Nothing
+  DOCUMENT
+  [ Node
+      Nothing
+      PARAGRAPH
+      [ Node Nothing (TEXT "a") []
+      , Node Nothing SOFTBREAK []
+      , Node Nothing (TEXT "b") []
+      , Node Nothing LINEBREAK []
+      , Node Nothing (TEXT "c") []
+      ]
+  ]

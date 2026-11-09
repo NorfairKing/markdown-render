@@ -1,0 +1,13 @@
+Node
+  Nothing
+  DOCUMENT
+  [ Node
+      Nothing
+      PARAGRAPH
+      [ Node Nothing (TEXT "a") []
+      , Node Nothing (CODE "b") []
+      , Node Nothing (TEXT "c d") []
+      , Node Nothing (CODE "e") []
+      , Node Nothing (TEXT "f") []
+      ]
+  ]

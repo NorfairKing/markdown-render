@@ -1,0 +1,10 @@
+Node
+  Nothing
+  DOCUMENT
+  [ Node
+      Nothing
+      PARAGRAPH
+      [ Node Nothing (TEXT "a ") []
+      , Node Nothing (LINK "u" "") [ Node Nothing (CODE "]:") [] ]
+      ]
+  ]

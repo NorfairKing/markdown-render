@@ -1,0 +1,15 @@
+Node
+  Nothing
+  DOCUMENT
+  [ Node
+      Nothing
+      PARAGRAPH
+      [ Node
+          Nothing
+          (LINK "f" "")
+          [ Node Nothing (TEXT "a b") []
+          , Node Nothing SOFTBREAK []
+          , Node Nothing (TEXT "c") []
+          ]
+      ]
+  ]

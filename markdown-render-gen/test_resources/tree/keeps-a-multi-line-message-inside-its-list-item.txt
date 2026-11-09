@@ -1,0 +1,27 @@
+Node
+  Nothing
+  DOCUMENT
+  [ Node
+      Nothing
+      (LIST
+         ListAttributes
+           { listType = BULLET_LIST
+           , listTight = True
+           , listStart = 0
+           , listDelim = PERIOD_DELIM
+           })
+      [ Node
+          Nothing
+          ITEM
+          [ Node
+              Nothing
+              PARAGRAPH
+              [ Node Nothing (TEXT "Message: fix it") []
+              , Node Nothing SOFTBREAK []
+              , Node Nothing (TEXT "# Not a heading") []
+              , Node Nothing SOFTBREAK []
+              , Node Nothing (TEXT "- not an item") []
+              ]
+          ]
+      ]
+  ]

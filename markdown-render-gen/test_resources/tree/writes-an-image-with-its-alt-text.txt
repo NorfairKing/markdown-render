@@ -1,0 +1,14 @@
+Node
+  Nothing
+  DOCUMENT
+  [ Node
+      Nothing
+      PARAGRAPH
+      [ Node
+          Nothing
+          (IMAGE "c.png" "")
+          [ Node Nothing (TEXT "a ") []
+          , Node Nothing EMPH [ Node Nothing (TEXT "b") [] ]
+          ]
+      ]
+  ]

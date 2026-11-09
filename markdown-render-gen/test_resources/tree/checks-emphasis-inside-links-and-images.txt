@@ -1,0 +1,13 @@
+Node
+  Nothing
+  DOCUMENT
+  [ Node
+      Nothing
+      PARAGRAPH
+      [ Node Nothing (LINK "d" "") [ Node Nothing (TEXT "a(b)c") [] ]
+      , Node
+          Nothing
+          (IMAGE "f" "")
+          [ Node Nothing STRONG [ Node Nothing (TEXT "(e)") [] ] ]
+      ]
+  ]

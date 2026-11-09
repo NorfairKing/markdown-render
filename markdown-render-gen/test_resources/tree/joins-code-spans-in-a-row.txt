@@ -1,0 +1,4 @@
+Node
+  Nothing
+  DOCUMENT
+  [ Node Nothing PARAGRAPH [ Node Nothing (CODE "ab") [] ] ]

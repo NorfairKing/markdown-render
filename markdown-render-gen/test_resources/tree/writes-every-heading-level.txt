@@ -1,0 +1,10 @@
+Node
+  Nothing
+  DOCUMENT
+  [ Node Nothing (HEADING 1) [ Node Nothing (TEXT "a") [] ]
+  , Node Nothing (HEADING 2) [ Node Nothing (TEXT "b") [] ]
+  , Node Nothing (HEADING 3) [ Node Nothing (TEXT "c") [] ]
+  , Node Nothing (HEADING 4) [ Node Nothing (TEXT "d") [] ]
+  , Node Nothing (HEADING 5) [ Node Nothing (TEXT "e") [] ]
+  , Node Nothing (HEADING 6) [ Node Nothing (TEXT "f") [] ]
+  ]

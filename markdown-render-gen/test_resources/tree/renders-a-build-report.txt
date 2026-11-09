@@ -1,0 +1,130 @@
+Node
+  Nothing
+  DOCUMENT
+  [ Node
+      Nothing
+      (HEADING 1)
+      [ Node Nothing (TEXT "main: Fix the cache key") [] ]
+  , Node
+      Nothing
+      (LIST
+         ListAttributes
+           { listType = BULLET_LIST
+           , listTight = True
+           , listStart = 0
+           , listDelim = PERIOD_DELIM
+           })
+      [ Node
+          Nothing
+          ITEM
+          [ Node
+              Nothing
+              PARAGRAPH
+              [ Node Nothing STRONG [ Node Nothing (TEXT "Commit") [] ]
+              , Node Nothing (TEXT ": ") []
+              , Node Nothing (CODE "1a2b3c4") []
+              ]
+          ]
+      , Node
+          Nothing
+          ITEM
+          [ Node
+              Nothing
+              PARAGRAPH
+              [ Node Nothing STRONG [ Node Nothing (TEXT "Message") [] ]
+              , Node Nothing (TEXT ": Fix the cache key") []
+              , Node Nothing SOFTBREAK []
+              , Node Nothing (TEXT "* It was [wrong](no)") []
+              , Node Nothing SOFTBREAK []
+              , Node Nothing (TEXT "# for `nix` 2.18") []
+              ]
+          ]
+      , Node
+          Nothing
+          ITEM
+          [ Node
+              Nothing
+              PARAGRAPH
+              [ Node Nothing STRONG [ Node Nothing (TEXT "Author") [] ]
+              , Node Nothing (TEXT ": Jane Doe <jane@example.com>") []
+              ]
+          ]
+      ]
+  , Node Nothing (HEADING 2) [ Node Nothing (TEXT "Runs") [] ]
+  , Node
+      Nothing
+      (LIST
+         ListAttributes
+           { listType = BULLET_LIST
+           , listTight = True
+           , listStart = 0
+           , listDelim = PERIOD_DELIM
+           })
+      [ Node
+          Nothing
+          ITEM
+          [ Node
+              Nothing
+              PARAGRAPH
+              [ Node Nothing (TEXT "[success] ") []
+              , Node
+                  Nothing
+                  (LINK "https://ci.example.com/run/1" "")
+                  [ Node Nothing (TEXT "build packages.x86_64-linux.default") [] ]
+              ]
+          ]
+      , Node
+          Nothing
+          ITEM
+          [ Node
+              Nothing
+              PARAGRAPH
+              [ Node Nothing (TEXT "[failure] ") []
+              , Node
+                  Nothing
+                  (LINK "https://ci.example.com/run/2" "")
+                  [ Node Nothing (TEXT "test checks.x86_64-linux.e2e_test") [] ]
+              , Node Nothing (TEXT " (attempt 2)") []
+              ]
+          , Node
+              Nothing
+              (LIST
+                 ListAttributes
+                   { listType = BULLET_LIST
+                   , listTight = True
+                   , listStart = 0
+                   , listDelim = PERIOD_DELIM
+                   })
+              [ Node
+                  Nothing
+                  ITEM
+                  [ Node
+                      Nothing
+                      PARAGRAPH
+                      [ Node Nothing (TEXT "Dependencies: ") []
+                      , Node Nothing (CODE "packages.x86_64-linux.default") []
+                      ]
+                  ]
+              ]
+          ]
+      ]
+  , Node Nothing (HEADING 2) [ Node Nothing (TEXT "Reproduce") [] ]
+  , Node
+      Nothing
+      (CODE_BLOCK "bash" "nix build .#checks.x86_64-linux.e2e_test\n")
+      []
+  , Node
+      Nothing
+      BLOCK_QUOTE
+      [ Node
+          Nothing
+          PARAGRAPH
+          [ Node Nothing (TEXT "Logs are at ") []
+          , Node
+              Nothing
+              (LINK "https://ci.example.com/run/2" "")
+              [ Node Nothing (TEXT "the run page") [] ]
+          , Node Nothing (TEXT ".") []
+          ]
+      ]
+  ]

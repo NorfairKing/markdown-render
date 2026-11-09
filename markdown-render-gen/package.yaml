@@ -1,0 +1,68 @@
+name: markdown-render-gen
+version: 0.0.0.0
+github: NorfairKing/markdown-render
+synopsis: Generators for markdown-render
+description: ! 'Generators for <https://hackage.haskell.org/package/markdown-render
+  markdown-render>.
+
+
+  For more info, see <https://github.com/NorfairKing/markdown-render the readme>.'
+category: Text
+author: Tom Sydney Kerckhove
+maintainer: syd@cs-syd.eu
+copyright: Copyright (c) 2026 Tom Sydney Kerckhove
+license: AllRightsReserved
+license-file: LICENSE
+
+extra-source-files:
+- LICENSE
+- CHANGELOG.md
+- test_resources/**/*
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src/
+  ghc-options:
+  - -Wall
+  - -Wincomplete-uni-patterns
+  - -Wincomplete-record-updates
+  - -Wpartial-fields
+  - -Widentities
+  - -Wredundant-constraints
+  - -Wcpp-undef
+  - -Wunused-packages
+  dependencies:
+  - QuickCheck
+  - genvalidity
+  - genvalidity-text
+  - markdown-render
+  - text
+
+tests:
+  markdown-render-test:
+    main: Spec.hs
+    source-dirs: test/
+    build-tools: sydtest-discover
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -Wall
+    - -Wincomplete-uni-patterns
+    - -Wincomplete-record-updates
+    - -Wpartial-fields
+    - -Widentities
+    - -Wredundant-constraints
+    - -Wcpp-undef
+    - -Wunused-packages
+    dependencies:
+    - QuickCheck
+    - bytestring
+    - cmark
+    - genvalidity-sydtest
+    - markdown-render
+    - markdown-render-gen
+    - sydtest
+    - text

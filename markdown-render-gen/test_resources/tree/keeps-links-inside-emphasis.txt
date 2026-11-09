@@ -1,0 +1,27 @@
+Node
+  Nothing
+  DOCUMENT
+  [ Node
+      Nothing
+      PARAGRAPH
+      [ Node
+          Nothing
+          EMPH
+          [ Node Nothing (TEXT "a ") []
+          , Node
+              Nothing
+              (LINK "d" "")
+              [ Node Nothing (TEXT "b") []
+              , Node Nothing SOFTBREAK []
+              , Node Nothing (TEXT "c") []
+              ]
+          ]
+      , Node Nothing (TEXT " ") []
+      , Node
+          Nothing
+          STRONG
+          [ Node Nothing (TEXT "e ") []
+          , Node Nothing (LINK "g" "") [ Node Nothing (TEXT "f") [] ]
+          ]
+      ]
+  ]

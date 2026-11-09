@@ -1,0 +1,13 @@
+Node
+  Nothing
+  DOCUMENT
+  [ Node
+      Nothing
+      (HEADING 2)
+      [ Node Nothing (TEXT "a b c") []
+      , Node
+          Nothing
+          (LINK "f" "")
+          [ Node Nothing EMPH [ Node Nothing (TEXT "d e") [] ] ]
+      ]
+  ]

@@ -1,0 +1,2 @@
+Node
+  Nothing DOCUMENT [ Node Nothing (CODE_BLOCK "" "a\nb\nc\n") [] ]

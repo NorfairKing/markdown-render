@@ -1,0 +1,30 @@
+Node
+  Nothing
+  DOCUMENT
+  [ Node
+      Nothing
+      PARAGRAPH
+      [ Node Nothing (TEXT "a ") []
+      , Node Nothing STRONG [ Node Nothing (TEXT "(b)") [] ]
+      , Node Nothing (LINK "d" "") [ Node Nothing (TEXT "c") [] ]
+      , Node Nothing (TEXT " e ") []
+      , Node Nothing STRONG [ Node Nothing (TEXT "(f)") [] ]
+      , Node Nothing (IMAGE "h" "") [ Node Nothing (TEXT "g") [] ]
+      , Node Nothing (TEXT " ") []
+      , Node Nothing STRONG [ Node Nothing (TEXT "(i)") [] ]
+      , Node Nothing SOFTBREAK []
+      , Node Nothing (TEXT "j ") []
+      , Node Nothing STRONG [ Node Nothing (TEXT "(k)") [] ]
+      , Node Nothing LINEBREAK []
+      , Node Nothing (TEXT "l ") []
+      , Node
+          Nothing
+          STRONG
+          [ Node Nothing (LINK "n" "") [ Node Nothing (TEXT "m") [] ] ]
+      , Node Nothing (TEXT " ") []
+      , Node
+          Nothing
+          EMPH
+          [ Node Nothing (IMAGE "p" "") [ Node Nothing (TEXT "o") [] ] ]
+      ]
+  ]

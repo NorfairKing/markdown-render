@@ -1,0 +1,189 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.38.3.
+--
+-- see: https://github.com/sol/hpack
+
+name:           markdown-render-gen
+version:        0.0.0.0
+synopsis:       Generators for markdown-render
+description:    Generators for <https://hackage.haskell.org/package/markdown-render markdown-render>.
+                .
+                For more info, see <https://github.com/NorfairKing/markdown-render the readme>.
+category:       Text
+homepage:       https://github.com/NorfairKing/markdown-render#readme
+bug-reports:    https://github.com/NorfairKing/markdown-render/issues
+author:         Tom Sydney Kerckhove
+maintainer:     syd@cs-syd.eu
+copyright:      Copyright (c) 2026 Tom Sydney Kerckhove
+license:        AllRightsReserved
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    LICENSE
+    CHANGELOG.md
+    test_resources/rendering/checks-emphasis-inside-links-and-images.md
+    test_resources/rendering/does-not-write-a-link-that-would-read-as-a-link-reference-definition.md
+    test_resources/rendering/drops-emphasis-that-a-reader-would-not-see-as-emphasis.md
+    test_resources/rendering/drops-emphasis-that-starts-with-punctuation-after-a-letter.md
+    test_resources/rendering/ends-every-line-of-a-code-block-with-a-newline.md
+    test_resources/rendering/escapes-markup-in-text.md
+    test_resources/rendering/escapes-the-info-string-of-a-code-block.md
+    test_resources/rendering/escapes-tildes-that-would-open-a-code-block.md
+    test_resources/rendering/fences-a-code-block-with-more-backticks-than-it-contains.md
+    test_resources/rendering/fences-a-code-block-with-tildes-when-its-info-string-has-a-backtick.md
+    test_resources/rendering/joins-code-spans-in-a-row.md
+    test_resources/rendering/joins-emphasis-in-a-row.md
+    test_resources/rendering/keeps-a-link-inside-an-image.md
+    test_resources/rendering/keeps-a-loose-list-separated-after-a-quoted-thematic-break-loose.md
+    test_resources/rendering/keeps-a-loose-list-separated-only-after-thematic-breaks-tight.md
+    test_resources/rendering/keeps-a-loose-list-with-nothing-to-separate-tight.md
+    test_resources/rendering/keeps-a-multi-line-message-inside-its-list-item.md
+    test_resources/rendering/keeps-a-tight-list-whose-paragraph-follows-a-nested-thematic-break.md
+    test_resources/rendering/keeps-a-tight-list-whose-quote-follows-a-paragraph.md
+    test_resources/rendering/keeps-bullet-lists-in-a-row-apart.md
+    test_resources/rendering/keeps-emphasis-next-to-links-images-and-breaks.md
+    test_resources/rendering/keeps-emphasis-next-to-punctuation-and-whitespace.md
+    test_resources/rendering/keeps-escapes-that-only-a-list-item-needs.md
+    test_resources/rendering/keeps-links-inside-emphasis.md
+    test_resources/rendering/keeps-ordered-lists-in-a-row-apart.md
+    test_resources/rendering/keeps-the-text-of-a-link-inside-a-link.md
+    test_resources/rendering/keeps-the-text-of-links-inside-links-inside-links.md
+    test_resources/rendering/leaves-out-a-list-of-only-empty-items.md
+    test_resources/rendering/leaves-out-a-paragraph-of-only-whitespace.md
+    test_resources/rendering/leaves-out-an-empty-code-span.md
+    test_resources/rendering/leaves-out-emphasis-of-only-whitespace.md
+    test_resources/rendering/leaves-out-empty-list-items.md
+    test_resources/rendering/leaves-out-escapes-a-reader-does-not-need.md
+    test_resources/rendering/loosens-a-tight-list-whose-paragraph-would-continue-a-nested-list.md
+    test_resources/rendering/loosens-a-tight-list-whose-paragraph-would-continue-a-quote.md
+    test_resources/rendering/loosens-a-tight-list-whose-paragraphs-would-run-together.md
+    test_resources/rendering/loosens-a-tight-list-whose-quotes-would-run-together.md
+    test_resources/rendering/makes-breaks-in-a-row-into-one.md
+    test_resources/rendering/moves-whitespace-out-of-emphasis.md
+    test_resources/rendering/percent-encodes-whitespace-in-a-link-destination.md
+    test_resources/rendering/puts-a-code-span-on-one-line.md
+    test_resources/rendering/puts-a-heading-on-one-line.md
+    test_resources/rendering/renders-a-build-report.md
+    test_resources/rendering/replaces-the-characters-libcmark-cannot-write.md
+    test_resources/rendering/separates-the-blocks-in-a-quote.md
+    test_resources/rendering/separates-the-items-of-a-loose-list.md
+    test_resources/rendering/strips-spaces-around-line-breaks.md
+    test_resources/rendering/trims-a-paragraph.md
+    test_resources/rendering/trims-breaks-off-the-edges-of-a-label.md
+    test_resources/rendering/unwraps-emphasis-at-the-edge-of-emphasis.md
+    test_resources/rendering/unwraps-emphasis-inside-emphasis.md
+    test_resources/rendering/unwraps-the-second-of-two-emphases-in-a-row.md
+    test_resources/rendering/writes-a-link-with-brackets-in-its-label-elsewhere.md
+    test_resources/rendering/writes-a-thematic-break-that-cannot-underline-the-line-above-it.md
+    test_resources/rendering/writes-an-empty-code-block.md
+    test_resources/rendering/writes-an-empty-quote.md
+    test_resources/rendering/writes-an-image-with-its-alt-text.md
+    test_resources/rendering/writes-emphasis-of-strong-emphasis.md
+    test_resources/rendering/writes-every-heading-level.md
+    test_resources/rendering/writes-tight-lists.md
+    test_resources/tree/checks-emphasis-inside-links-and-images.txt
+    test_resources/tree/does-not-write-a-link-that-would-read-as-a-link-reference-definition.txt
+    test_resources/tree/drops-emphasis-that-a-reader-would-not-see-as-emphasis.txt
+    test_resources/tree/drops-emphasis-that-starts-with-punctuation-after-a-letter.txt
+    test_resources/tree/ends-every-line-of-a-code-block-with-a-newline.txt
+    test_resources/tree/escapes-markup-in-text.txt
+    test_resources/tree/escapes-the-info-string-of-a-code-block.txt
+    test_resources/tree/escapes-tildes-that-would-open-a-code-block.txt
+    test_resources/tree/fences-a-code-block-with-more-backticks-than-it-contains.txt
+    test_resources/tree/fences-a-code-block-with-tildes-when-its-info-string-has-a-backtick.txt
+    test_resources/tree/joins-code-spans-in-a-row.txt
+    test_resources/tree/joins-emphasis-in-a-row.txt
+    test_resources/tree/keeps-a-link-inside-an-image.txt
+    test_resources/tree/keeps-a-loose-list-separated-after-a-quoted-thematic-break-loose.txt
+    test_resources/tree/keeps-a-loose-list-separated-only-after-thematic-breaks-tight.txt
+    test_resources/tree/keeps-a-loose-list-with-nothing-to-separate-tight.txt
+    test_resources/tree/keeps-a-multi-line-message-inside-its-list-item.txt
+    test_resources/tree/keeps-a-tight-list-whose-paragraph-follows-a-nested-thematic-break.txt
+    test_resources/tree/keeps-a-tight-list-whose-quote-follows-a-paragraph.txt
+    test_resources/tree/keeps-bullet-lists-in-a-row-apart.txt
+    test_resources/tree/keeps-emphasis-next-to-links-images-and-breaks.txt
+    test_resources/tree/keeps-emphasis-next-to-punctuation-and-whitespace.txt
+    test_resources/tree/keeps-escapes-that-only-a-list-item-needs.txt
+    test_resources/tree/keeps-links-inside-emphasis.txt
+    test_resources/tree/keeps-ordered-lists-in-a-row-apart.txt
+    test_resources/tree/keeps-the-text-of-a-link-inside-a-link.txt
+    test_resources/tree/keeps-the-text-of-links-inside-links-inside-links.txt
+    test_resources/tree/leaves-out-a-list-of-only-empty-items.txt
+    test_resources/tree/leaves-out-a-paragraph-of-only-whitespace.txt
+    test_resources/tree/leaves-out-an-empty-code-span.txt
+    test_resources/tree/leaves-out-emphasis-of-only-whitespace.txt
+    test_resources/tree/leaves-out-empty-list-items.txt
+    test_resources/tree/leaves-out-escapes-a-reader-does-not-need.txt
+    test_resources/tree/loosens-a-tight-list-whose-paragraph-would-continue-a-nested-list.txt
+    test_resources/tree/loosens-a-tight-list-whose-paragraph-would-continue-a-quote.txt
+    test_resources/tree/loosens-a-tight-list-whose-paragraphs-would-run-together.txt
+    test_resources/tree/loosens-a-tight-list-whose-quotes-would-run-together.txt
+    test_resources/tree/makes-breaks-in-a-row-into-one.txt
+    test_resources/tree/moves-whitespace-out-of-emphasis.txt
+    test_resources/tree/percent-encodes-whitespace-in-a-link-destination.txt
+    test_resources/tree/puts-a-code-span-on-one-line.txt
+    test_resources/tree/puts-a-heading-on-one-line.txt
+    test_resources/tree/renders-a-build-report.txt
+    test_resources/tree/replaces-the-characters-libcmark-cannot-write.txt
+    test_resources/tree/separates-the-blocks-in-a-quote.txt
+    test_resources/tree/separates-the-items-of-a-loose-list.txt
+    test_resources/tree/strips-spaces-around-line-breaks.txt
+    test_resources/tree/trims-a-paragraph.txt
+    test_resources/tree/trims-breaks-off-the-edges-of-a-label.txt
+    test_resources/tree/unwraps-emphasis-at-the-edge-of-emphasis.txt
+    test_resources/tree/unwraps-emphasis-inside-emphasis.txt
+    test_resources/tree/unwraps-the-second-of-two-emphases-in-a-row.txt
+    test_resources/tree/writes-a-link-with-brackets-in-its-label-elsewhere.txt
+    test_resources/tree/writes-a-thematic-break-that-cannot-underline-the-line-above-it.txt
+    test_resources/tree/writes-an-empty-code-block.txt
+    test_resources/tree/writes-an-empty-quote.txt
+    test_resources/tree/writes-an-image-with-its-alt-text.txt
+    test_resources/tree/writes-emphasis-of-strong-emphasis.txt
+    test_resources/tree/writes-every-heading-level.txt
+    test_resources/tree/writes-tight-lists.txt
+
+source-repository head
+  type: git
+  location: https://github.com/NorfairKing/markdown-render
+
+library
+  exposed-modules:
+      Markdown.Render.Gen
+  other-modules:
+      Paths_markdown_render_gen
+  hs-source-dirs:
+      src/
+  ghc-options: -Wall -Wincomplete-uni-patterns -Wincomplete-record-updates -Wpartial-fields -Widentities -Wredundant-constraints -Wcpp-undef -Wunused-packages
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+    , genvalidity
+    , genvalidity-text
+    , markdown-render
+    , text
+  default-language: Haskell2010
+
+test-suite markdown-render-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Markdown.Render.EscapesSpec
+      Markdown.RenderSpec
+      Paths_markdown_render_gen
+  hs-source-dirs:
+      test/
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall -Wincomplete-uni-patterns -Wincomplete-record-updates -Wpartial-fields -Widentities -Wredundant-constraints -Wcpp-undef -Wunused-packages
+  build-tool-depends:
+      sydtest-discover:sydtest-discover
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+    , bytestring
+    , cmark
+    , genvalidity-sydtest
+    , markdown-render
+    , markdown-render-gen
+    , sydtest
+    , text
+  default-language: Haskell2010

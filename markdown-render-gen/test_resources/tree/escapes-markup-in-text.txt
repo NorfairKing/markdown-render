@@ -1,0 +1,8 @@
+Node
+  Nothing
+  DOCUMENT
+  [ Node
+      Nothing
+      PARAGRAPH
+      [ Node Nothing (TEXT "# not a *heading* [x](y) `z` <b> &amp;") [] ]
+  ]

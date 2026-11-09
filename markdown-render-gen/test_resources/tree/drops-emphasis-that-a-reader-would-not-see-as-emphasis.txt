@@ -1,0 +1,11 @@
+Node
+  Nothing
+  DOCUMENT
+  [ Node
+      Nothing
+      PARAGRAPH
+      [ Node Nothing (TEXT "a(b)c (d)e ") []
+      , Node Nothing STRONG [ Node Nothing (TEXT "\8364f") [] ]
+      , Node Nothing (TEXT " gh\8364\8364") []
+      ]
+  ]

@@ -1,0 +1,6 @@
+Node
+  Nothing
+  DOCUMENT
+  [ Node Nothing PARAGRAPH [ Node Nothing (TEXT "a") [] ]
+  , Node Nothing PARAGRAPH [ Node Nothing (TEXT "b") [] ]
+  ]

@@ -1,0 +1,17 @@
+Node
+  Nothing
+  DOCUMENT
+  [ Node
+      Nothing
+      PARAGRAPH
+      [ Node Nothing (TEXT "a ") []
+      , Node Nothing STRONG [ Node Nothing (TEXT "b") [] ]
+      , Node Nothing (TEXT " c") []
+      , Node Nothing SOFTBREAK []
+      , Node Nothing EMPH [ Node Nothing (TEXT "d") [] ]
+      , Node Nothing SOFTBREAK []
+      , Node Nothing (TEXT "e") []
+      , Node Nothing LINEBREAK []
+      , Node Nothing STRONG [ Node Nothing (TEXT "f") [] ]
+      ]
+  ]
